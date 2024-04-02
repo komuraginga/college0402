@@ -1,0 +1,9 @@
+<?php
+ $a= "Shinjuku";
+ $b= 1;
+ $c="Shinjuku, Shibuya, Ikebukuro"
+ $d= "true";
+ $e;
+ 
+ var_dump($a).php_eol.var_dump($b).php_eol.var_dump($d).php_eol.var_dump($e).php_eol;
+ ?>
