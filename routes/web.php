@@ -1,10 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-=======
 use App\Http\Controllers\PostController;  //外部にあるPostControllerクラスをインポート。
->>>>>>> origin/master
 
 /*
 |--------------------------------------------------------------------------
@@ -17,10 +14,6 @@ use App\Http\Controllers\PostController;  //外部にあるPostControllerクラ�
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-<<<<<<< HEAD
-=======
-Route::get('/posts', [PostController::class, 'index']);
->>>>>>> origin/master
+Route::get('/', [PostController::class, 'index']);
+Route::get('/posts/{post}', [PostController::class ,'show']);
+// '/posts/{対象データのID}'にGetリクエストが来たら、PostControllerのshowメソッドを実行する
