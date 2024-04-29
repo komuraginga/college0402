@@ -2,21 +2,12 @@
 
 namespace App\Http\Controllers;
 
-<<<<<<< HEAD
-use Illuminate\Http\Request; //use宣言は外部にあるクラスをPostController内にインポートできる。","//この場合、App\\Models内のPostクラスをインポートしている。
-=======
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
->>>>>>> dev_basis05
 use App\Models\Post;
 
 class PostController extends Controller
 {
-<<<<<<< HEAD
-    public function index(Post $post)//インポートしたPostをインスタンス化して$postとして使用。","    
-{
-    return view('posts/index') -> with(['posts' => $post->getPaginateByLimit(1)]);
-=======
     public function index(Post $post)
     {
         return view('posts.index')->with(['posts' => $post->getPaginateByLimit(5)]);
@@ -59,24 +50,4 @@ public function edit(Post $post)
 
     return redirect('/posts/' . $post->id);
 }
->>>>>>> dev_basis05
-}
-
-public function show(Post $post)
-{
-return view('posts/show')->with(['post' => $post]);
-}
-
-public function create()
-{
-return view('posts/create');
-}
-
-public function store(Request $request, Post $post)
-{
-    $input = $request['post'];
-    $post->fill($input)->save();
-    return redirect('/posts/' . $post->id);
-}
-
 }
