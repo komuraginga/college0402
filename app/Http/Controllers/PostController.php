@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Requests\PostRequest;
+use Illuminate\Http\Request; //use宣言は外部にあるクラスをPostController内にインポートできる。","//この場合、App\\Models内のPostクラスをインポートしている。
+use App\Http\Requests\PostRequest; // useする
 use App\Models\Post;
+
 
 class PostController extends Controller
 {
@@ -20,6 +21,7 @@ class PostController extends Controller
  * @params Object Post // 引数の$postはid=1のPostインスタンス
  * @return Reposnse post view
  */
+
 public function show(Post $post)
 {
     return view('posts/show')->with(['post' => $post]);
@@ -31,7 +33,7 @@ public function show(Post $post)
 return view('posts/create');
 }
 
-public function store(Request $request, Post $post)
+public function store(PostRequest $request, Post $post)
 {
     $input = $request['post'];
     $post->fill($input)->save();
