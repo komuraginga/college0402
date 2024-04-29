@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Blog</title>
+         <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         
     </head>
     <body>
@@ -21,6 +23,8 @@
             </div>
             <input type="submit" value="保存">
         </form>
-        <div class="back">[<a href="/">back</a>]</div>
+        <div class="back">
+            [<a href="/">戻る</a>]
+            </div>
     </body>
 </html>
